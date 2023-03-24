@@ -1,0 +1,36 @@
+<!--<div class="row"> 
+    <div class=" col-xs-6 col-sm-12 col-md-12 col-lg-12 fondo" >-->
+                <div class="cardp">
+                <h1>Skills</h1>
+                <button routerLink="/newskill" *ngIf="isLogged">+</button>
+            <div class="cardp circulo">
+            <div *ngFor="let skill of skill">
+                
+                <circle-progress
+                [percent]="(skill.porcentaje)"
+                [radius]="100"
+                [title]="(skill.nombre)"
+                [showUnits]="false"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#78C000'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="300"
+              ></circle-progress>
+              <div>
+                <td *ngIf="isLogged">
+                    <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+                        <i class="bi bi-pencil-fill"></i></button>
+                </td>
+                <td *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(skill.id)">
+                        <i class="bi bi-trash-fill"></i></button>
+                </td>
+            </div>
+            </div>
+             </div>
+        </div>
+   <!-- </div>
+    </div>-->

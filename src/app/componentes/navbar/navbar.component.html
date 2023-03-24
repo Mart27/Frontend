@@ -1,0 +1,8 @@
+<div class="row ">
+	<div class="col-xs-6 col-sm-12 col-md-12 col-lg-12 fondo">
+		<div class="fondo barra">
+	<button class="btn btn-primary login" (click)="login()" *ngIf="!isLogged">login</button>
+	<button class="btn btn-primary login" (click)="onLogOut()" *ngIf="isLogged">cerrar sesion</button>
+		</div>
+	</div>
+</div>

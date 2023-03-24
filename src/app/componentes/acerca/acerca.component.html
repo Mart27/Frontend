@@ -1,0 +1,23 @@
+
+		<div class="banner">
+			<img src="assets/banner.jpg" id="img-banner">
+			<span>
+				<img src="assets/perfil.jpg" id="perfil">
+			</span>
+			<button class="btn btn-light" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
+				<i class="bi bi-pencil-fill"></i>editar
+			</button>
+			<div id="datos">
+				<h2>{{persona.nombre}}{{persona.apellido}}</h2>
+				<label>Buenos Aires(Argentina)</label>
+
+				<br>
+
+				<div class="acerca-header">
+					<div class="acerca-tittle">
+						<h2>Sobre mi</h2>
+					</div>
+				</div>
+				<p>{{persona.descripcion}}</p>
+			</div>
+		</div>
